@@ -13,6 +13,7 @@ var serverKey = 'YAAAASVgkMfU:APA91bHfhiBNTQ1J0lDHLvArcICihFYF-WDBermLe5DaLHD1-a
 var fcm = new FCM(serverKey);
 
 
+
 var admin = require("firebase-admin");
 
 var serviceAccount = require("./vandore-ac2b8-firebase-adminsdk-67n7n-75919a5e94.json");
@@ -36,8 +37,8 @@ request.headers({
 
 
 const razorpay = new Razorpay({
-	key_id: 'rzp_test_eDFr81LNWkdTcM',
-	key_secret: 'PMOE7ytZJizoDW7bSBP1BaAk'
+	key_id: 'rzp_live_wlIDmWLjbK9t9Q',
+	key_secret: 'PEDVVWDUrnNBNjJ43zNWOqLH'
 })
 
 
@@ -185,8 +186,8 @@ router.post("/orderSMS", (req, res) => {
 	  
 	  request.end(function (res) {
 		if (res.error) throw new Error(res.error);
-	  
-		
+	    
+		   
 	  });
 
       res.status(200).json({

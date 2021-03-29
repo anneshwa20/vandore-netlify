@@ -175,10 +175,11 @@ router.post('/orderEmail', async (req, res) => {
 
 router.post("/orderSMS", (req, res) => {
 	request.form({
-		"sender_id": "CHKSMS",
-		"message": 7,
+		"route" : "dlt",
+        "sender_id" : "VANDOR", 
+		"message": req.query.messageId,
 		"language": "english",
-		"route": "s",
+		
         "variables_values": req.query.message,
 		"numbers": req.query.phone,
         "flash": '0'
